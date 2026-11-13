@@ -16,3 +16,30 @@ VALUES
 ('Frango à Milanesa','Delicioso peito de frango à milanesa. Acompanha arroz, feijão e batatas fritas', 37.99),
 ('Filé Mignon ao Molho Madeira','Filá Mignon ao molho madeira. Acompanha arroz e batata rústica', 57.99),
 ('Costela ao Molho Barbecue','Costela ao molho barbecue. Acompanha arroz e cebola à milanesa', 59.99);
+
+
+/*
+API Trazer dados para Cardápio
+=================================
+Pratos
+ idPrato
+ nomePrato
+ descricao
+ preco
+ 
+Bebidas*
+ idBebida
+ nomeBebida
+ volume  
+ alcoolico
+ preco
+ 
+Sobremesa*
+ idSobremesa
+ nomeSobremesa
+ descricao
+ preco
+*/
+CREATE TABLE bebidas(
+idBebida INT AUTO_INCREMENT PRIMARY KEY,
+nomeBebida
