@@ -42,4 +42,34 @@ Sobremesa*
 */
 CREATE TABLE bebidas(
 idBebida INT AUTO_INCREMENT PRIMARY KEY,
-nomeBebida
+nomeBebida VARCHAR (30) NOT NULL UNIQUE,
+volumeML DECIMAL(6,2) NOT NULL,
+alcoolico BOOL NOT NULL DEFAULT FALSE,
+preco Decimal(6,2) NOT NULL
+);
+
+INSERT INTO bebidas(nomeBebida, volumeML, alcoolico, preco)
+VALUES 
+('Guaraná Antartica',500, FALSE, 5.75),
+('Água Mineral', 350, FALSE, 4.50),
+('Caipirinha', 250, TRUE, 15.00),
+('Coca-Cola', 1000, FALSE, 24.00)
+
+
+SELECT * FROM bebidas
+
+CREATE TABLE sobremesas(
+idSobremesa INT AUTO_INCREMENT PRIMARY KEY,
+nomeSobremesa VARCHAR (30) NOT NULL UNIQUE,
+descricao VARCHAR(200),
+preco DECIMAL(6,2) NOT null
+);
+
+INSERT INTO sobremesas(nomeSobremesa, descricao, preco)
+VALUES
+('Pudim de Leite Condensado', 'Pudim tradicional com calda de caramelo', 12.00),
+('Brigadeiro', 'Doce de chocolate feito com leite condensado', 4.50),
+('Brownie', 'Bolo de chocolate com casquinha crocante', 10.00),
+('Cheesecake', 'Torta cremosa de queijo com cobertura de morango', 15.00),
+('Mousse de Maracujá', 'Sobremesa cremosa com sabor de maracujá', 9.00);
+
