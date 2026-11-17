@@ -2,6 +2,7 @@
 
 namespace RestauranteLegal\Models;
 
+use Exception;
 class Prato{
 
     private int $idPrato;
@@ -28,8 +29,27 @@ class Prato{
        public function getNomePrato() : string{
            return $this->nomePrato;
        }
+
+       public function setNomePrato(string $pNomePrato) : void{
+       //não pode ser vazio
+       //ao menos 3 caractére 
+    
+       if(strlen($pNomePrato) == ""){
+            throw new Exception("O nome do prato precisa ser preenchido");
+       }else if (strlen($pNomePrato) < 3){
+            throw new Exception("O nome do prato precisa ter ao menos 3 caractéres");
+       }
+       $this->nomePrato = $pNomePrato;
+
+    
+       }
+
        public function getDescricao() : string{
         return $this->descricao;
+       }
+
+       public function setDescricao(string $pDescricao) : void{
+            $this->descricao = $pDescricao;
        }
        
        public function getPreco() : float{
