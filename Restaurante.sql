@@ -42,9 +42,9 @@ Sobremesa*
 */
 CREATE TABLE bebidas(
 idBebida INT AUTO_INCREMENT PRIMARY KEY,
-nomeBebida VARCHAR (30) NOT NULL UNIQUE,
+nomeBebida VARCHAR (30) NOT NULL,
 volumeML DECIMAL(6,2) NOT NULL,
-alcoolico BOOL NOT NULL DEFAULT FALSE,
+alcoolico BOOLEAN DEFAULT FALSE,
 preco Decimal(6,2) NOT NULL
 );
 
@@ -55,6 +55,7 @@ VALUES
 ('Caipirinha', 250, TRUE, 15.00),
 ('Coca-Cola', 1000, FALSE, 24.00)
 
+DROP TABLE bebidas
 
 SELECT * FROM bebidas
 
@@ -72,4 +73,12 @@ VALUES
 ('Brownie', 'Bolo de chocolate com casquinha crocante', 10.00),
 ('Cheesecake', 'Torta cremosa de queijo com cobertura de morango', 15.00),
 ('Mousse de Maracujá', 'Sobremesa cremosa com sabor de maracujá', 9.00);
+
+CREATE TABLE Marmita(
+idMarmita INT AUTO_INCREMENT PRIMARY KEY,
+nomeMarmita VARCHAR(100) NOT NULL Unique,
+preco DECIMAL(6,2) NOT NULL, 
+validade DATETIME NOT null
+);
+
 
